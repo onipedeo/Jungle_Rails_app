@@ -33,14 +33,13 @@
           </tr>
         </tfoot>
       </table>
-      <% end %>
-    </div>
-  
-  <div class="row">
-    <div class="col-xs-12">
+      </div>
+      
+      <div class="row">
+      <div class="col-xs-12">
       <%= form_tag orders_path do %>
         <script
-          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-amount="<%= cart_subtotal_cents %>"
           data-name="Jungle"
@@ -48,9 +47,10 @@
           data-locale="auto"
           data-email="kvirani@gmail.com"
           data-currency="cad">
-        </script>
+          </script>
+          <% end %>
+          </div>
+          </div>
       <% end %>
-    </div>
-  </div>
 
 </section>
