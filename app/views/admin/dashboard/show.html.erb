@@ -18,8 +18,15 @@
    </tr>
   </thead>
   <tbody>
-   <td class>1</td>
-   <td class><%= @product_count %></td>
-   <td class><%= @category_count %></td>
+  <tr>
+   <td class="">1</td>
+   <td class=""><%= @product_count %></td>
+   <td class=""><%= @category_count %></td>
+  </tr>
+  <tr>
+    <td class=""></td>
+    <td class=""><%= link_to "View Products", admin_products_path, class: "btn btn-secondary" %></td>
+    <td class=""><%= link_to 'View Categories', admin_categories_path, class: "btn btn-secondary" %></td>
+  </tr>
   </tbody>
 </table>
