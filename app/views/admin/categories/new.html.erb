@@ -12,11 +12,13 @@
   <% end %>
 
   <div class="field">
+  <br></br>
     <%= form.label :name %>
     <%= form.text_field :name %>
+    <br></br>
   </div>
-
+  
   <div class="actions">
-    <%= form.submit 'Create Category' %>
+    <%= form.submit 'Create Category', class: "btn btn-primary" %>
   </div>
 <% end %>
