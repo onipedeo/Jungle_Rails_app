@@ -73,10 +73,22 @@
           <%= link_to cart_path, class: "nav-link " do %> <%= fa_icon "shopping-cart" %>
           My Cart (<%= cart.size %>) <% end %>
         </li>
-      </ul>
-    </div>
-  </div>
+        <% if current_user %>
+        <%= link_to 'Logout', logout_path, method: :delete, class: 'nav-link' %>
+        <% else %>
+        <li class="nav-item">
+        <%= link_to 'Login', login_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+        <%= link_to 'Register', signup_path, class: 'nav-link' %>
+        </li>
+        <% end %>
+        </li>
+        </ul>
+      </div>
+     </div>
 </nav>
+
 <script>
 (function(){
 const gnr = () => {

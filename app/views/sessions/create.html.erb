@@ -1,0 +1,10 @@
+<% if flash[:notice].present? %>
+  <div class="notice" id="notice">
+    <%= flash[:notice] %>
+  </div>
+  <script>
+    setTimeout(() => {
+      window.location.href = '<%= root_path %>';
+    }, 1500);
+  </script>
+<% end %>
